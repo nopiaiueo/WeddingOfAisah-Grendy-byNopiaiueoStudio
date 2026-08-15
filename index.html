@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan - Aisah & Grendy</title>
-  <!-- Menghubungkan ke css/style.css -->
+  
+  <!-- Font Google Elegant -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Animation Library (AOS) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Audio Backsound -->
+  <!-- Backsound Musik Romantic Instrument -->
   <audio id="bg-music" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Tombol Musik Floating -->
@@ -19,40 +27,46 @@
 
   <!-- Section 1: Cover Pembuka -->
   <section id="cover" class="cover-section">
-    <div class="cover-content">
+    <div class="flower-frame frame-top">🌸</div>
+    <div class="cover-content" data-aos="zoom-in">
       <p class="subtitle">The Wedding of</p>
-      <h1>Aisah & Grendy</h1>
-      <p class="date">05 . 12 . 2026</p>
+      <h1 class="font-aesthetic">Aisah & Grendy</h1>
+      <p class="date">Sabtu, 05 Desember 2026</p>
       <button id="open-btn" class="btn">OPEN INVITATION</button>
     </div>
+    <div class="flower-frame frame-bottom">🌸</div>
   </section>
 
   <!-- Section 2: Konten Utama -->
   <main id="main-content" class="main-content hidden">
     
-    <!-- Ayat / Quote -->
-    <section class="card quote-card">
-      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
+    <!-- Quote Card -->
+    <section class="card quote-card" data-aos="fade-up">
+      <div class="floral-icon">🌿</div>
+      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."</p>
       <span>(QS. Ar-Rum: 21)</span>
     </section>
 
-    <!-- Mempelai -->
-    <section class="card couple-card">
-      <h2>Bride & Groom</h2>
-      <div class="couple-profile">
-        <h3>Siti Aisah, S.Pd.</h3>
+    <!-- Mempelai Card -->
+    <section class="card couple-card" data-aos="fade-up">
+      <h2 class="section-title">Bride & Groom</h2>
+      
+      <div class="couple-profile" data-aos="fade-right">
+        <h3 class="font-aesthetic">Siti Aisah, S.Pd.</h3>
         <p>Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
+
       <div class="couple-divider">&</div>
-      <div class="couple-profile">
-        <h3>Grendy, S.Pd.</h3>
+
+      <div class="couple-profile" data-aos="fade-left">
+        <h3 class="font-aesthetic">Grendy, S.Pd.</h3>
         <p>Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
 
     <!-- Countdown Timer -->
-    <section class="card timer-card">
-      <h2>Save The Date</h2>
+    <section class="card timer-card" data-aos="fade-up">
+      <h2 class="section-title">Save The Date</h2>
       <div class="countdown">
         <div class="time-box"><span id="days">00</span><p>Hari</p></div>
         <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
@@ -61,11 +75,70 @@
       </div>
     </section>
 
+    <!-- Location & Google Maps Card -->
+    <section class="card location-card" data-aos="fade-up">
+      <h2 class="section-title">Waktu & Lokasi</h2>
+      <div class="event-info">
+        <h3>Akad & Resepsi</h3>
+        <p>🗓️ Sabtu, 05 Desember 2026</p>
+        <p>⏰ 08.00 WIB - Selesai</p>
+        <p>📍 Gedung Balai Pertemuan / Kediaman Mempelai</p>
+      </div>
+      
+      <!-- Embed Google Maps -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.28580210344!2d106.78915835!3d-6.250000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e800000001%3A0x1!2sJakarta!5e0!3m2!1sid!2sid!4v1600000000000" width="100%" height="200" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">Buka Google Maps</a>
+    </section>
+
+    <!-- Galeri Foto Card -->
+    <section class="card gallery-card" data-aos="fade-up">
+      <h2 class="section-title">Our Moments</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Moment 1">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Moment 2">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600" alt="Moment 3">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Moment 4">
+      </div>
+    </section>
+
+    <!-- Form RSVP & Ucapan -->
+    <section class="card rsvp-card" data-aos="fade-up">
+      <h2 class="section-title">Konfirmasi Kehadiran</h2>
+      <form id="rsvp-form" class="rsvp-form">
+        <input type="text" placeholder="Nama Anda" required class="input-field">
+        <select class="input-field" required>
+          <option value="">Konfirmasi Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+        </select>
+        <textarea placeholder="Berikan Ucapan & Doa..." rows="3" class="input-field" required></textarea>
+        <button type="submit" class="btn">Kirim Ucapan</button>
+      </form>
+    </section>
+
+    <!-- Wedding Gift / Amplop Digital Card -->
+    <section class="card gift-card" data-aos="fade-up">
+      <h2 class="section-title">Wedding Gift</h2>
+      <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika ingin memberi hadiah, dapat melalui:</p>
+      <div class="bank-box">
+        <h4>Bank BCA</h4>
+        <p class="rekening">1234567890</p>
+        <p>a.n. Siti Aisah</p>
+      </div>
+    </section>
+
   </main>
 
-  <!-- KODE JS LANGSUNG DIDALAM HTML (ANTI GAGAL) -->
+  <!-- Script Animasi AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <!-- Logika JS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 1000, once: true });
+
       const openBtn = document.getElementById('open-btn');
       const cover = document.getElementById('cover');
       const mainContent = document.getElementById('main-content');
@@ -74,24 +147,18 @@
 
       let isPlaying = false;
 
-      // 1. Fungsi Buka Undangan & Putar Musik
       if (openBtn) {
         openBtn.addEventListener('click', () => {
-          if (cover) cover.style.display = 'none';
-          if (mainContent) mainContent.classList.remove('hidden');
-
+          cover.style.display = 'none';
+          mainContent.classList.remove('hidden');
+          window.dispatchEvent(new Event('resize')); // Refresh animasi AOS
+          
           if (bgMusic) {
-            bgMusic.play().then(() => {
-              isPlaying = true;
-              if (musicBtn) musicBtn.innerText = '🎵';
-            }).catch(err => {
-              console.log("Audio play blocked by browser:", err);
-            });
+            bgMusic.play().then(() => { isPlaying = true; }).catch(err => console.log(err));
           }
         });
       }
 
-      // 2. Tombol Play/Pause Musik
       if (musicBtn) {
         musicBtn.addEventListener('click', () => {
           if (isPlaying) {
@@ -106,28 +173,26 @@
         });
       }
 
-      // 3. Hitung Mundur ke 5 Desember 2026
+      // Countdown Timer 5 Des 2026
       const targetDate = new Date('December 5, 2026 08:00:00').getTime();
-
       setInterval(() => {
         const now = new Date().getTime();
-        const difference = targetDate - now;
+        const diff = targetDate - now;
 
-        if (difference > 0) {
-          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-          if (document.getElementById('days')) document.getElementById('days').innerText = days;
-          if (document.getElementById('hours')) document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-          if (document.getElementById('minutes')) document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-          if (document.getElementById('seconds')) document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
-        } else {
-          const timerContainer = document.querySelector('.countdown');
-          if (timerContainer) timerContainer.innerHTML = "<h3>Acara Telah Berlangsung!</h3>";
+        if (diff > 0) {
+          document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+          document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
         }
       }, 1000);
+
+      // RSVP Form Handler
+      document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Terima kasih atas konfirmasi dan ucapan Anda!');
+        e.target.reset();
+      });
     });
   </script>
 </body>
