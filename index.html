@@ -5,67 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan - Aisah & Grendy</title>
   
-  <!-- Font & Animasi AOS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Backsound Musik Romantic Instrument -->
+  <!-- Musik Backsound -->
   <audio id="bg-music" loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Tombol Musik Floating Berputar -->
   <button id="music-btn" class="music-btn spinning">🎵</button>
 
-  <!-- Section 1: Cover Pembuka Beranimasi -->
-  <section id="cover" class="cover-section">
-    <div class="flower float-1">🌸</div>
-    <div class="flower float-2">🌿</div>
-    <div class="flower float-3">✨</div>
-    
-    <div class="cover-content" data-aos="zoom-in" data-aos-duration="1200">
-      <p class="subtitle pulse">The Wedding of</p>
-      <h1 class="font-aesthetic glow-text">Aisah & Grendy</h1>
-      <p class="date">Sabtu, 05 Desember 2026</p>
-      <button id="open-btn" class="btn btn-bounce">OPEN INVITATION</button>
+  <!-- COVER AMPLOP INTERAKTIF -->
+  <div id="envelope-wrapper" class="envelope-wrapper">
+    <div class="envelope">
+      <div class="letter">
+        <div class="flower-decor float-1">🌸</div>
+        <div class="flower-decor float-2">🌿</div>
+        <p class="subtitle pulse">The Wedding of</p>
+        <h1 class="font-aesthetic glow-text">Aisah & Grendy</h1>
+        <p class="date">Sabtu, 05 Desember 2026</p>
+        <button id="open-btn" class="btn btn-bounce">Buka Undangan ✉️</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Section 2: Konten Utama -->
+  <!-- KONTEN UTAMA UNDANGAN -->
   <main id="main-content" class="main-content hidden">
     
-    <!-- Quote Card -->
-    <section class="card quote-card" data-aos="fade-up" data-aos-duration="1000">
-      <div class="flower-icon rotate">🌿</div>
-      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
-      <span>(QS. Ar-Rum: 21)</span>
+    <!-- Section Quote -->
+    <section class="card quote-card" data-aos="zoom-in-up" data-aos-duration="1200">
+      <div class="flower-spin">🌿</div>
+      <p class="quote-text">"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
+      <span class="quote-src">(QS. Ar-Rum: 21)</span>
     </section>
 
-    <!-- Mempelai Card -->
-    <section class="card couple-card">
-      <h2 class="section-title" data-aos="fade-down">Bride & Groom</h2>
+    <!-- Section Mempelai -->
+    <section class="card couple-card" data-aos="fade-up" data-aos-duration="1200">
+      <h2 class="section-title">Bride & Groom</h2>
       
-      <div class="couple-profile" data-aos="fade-right" data-aos-duration="1000">
+      <div class="couple-box" data-aos="fade-right" data-aos-delay="200">
+        <div class="avatar-frame pulse">👰🏻‍♀️</div>
         <h3 class="font-aesthetic">Siti Aisah, S.Pd.</h3>
         <p>Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
 
       <div class="couple-divider pulse">&</div>
 
-      <div class="couple-profile" data-aos="fade-left" data-aos-duration="1000">
+      <div class="couple-box" data-aos="fade-left" data-aos-delay="400">
+        <div class="avatar-frame pulse">🤵🏻‍♂️</div>
         <h3 class="font-aesthetic">Grendy, S.Pd.</h3>
         <p>Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
 
     <!-- Countdown Timer -->
-    <section class="card timer-card" data-aos="zoom-in" data-aos-duration="1000">
+    <section class="card timer-card" data-aos="flip-up" data-aos-duration="1200">
       <h2 class="section-title">Save The Date</h2>
       <div class="countdown">
         <div class="time-box"><span id="days">00</span><p>Hari</p></div>
@@ -75,70 +74,72 @@
       </div>
     </section>
 
-    <!-- Lokasi & Peta -->
-    <section class="card location-card" data-aos="fade-up" data-aos-duration="1000">
+    <!-- Waktu & Lokasi (Sudah Di-update!) -->
+    <section class="card location-card" data-aos="fade-up" data-aos-duration="1200">
       <h2 class="section-title">Waktu & Lokasi</h2>
       <div class="event-info">
         <h3>Akad & Resepsi</h3>
         <p>🗓️ Sabtu, 05 Desember 2026</p>
         <p>⏰ 08.00 WIB - Selesai</p>
-        <p>📍 Gedung Balai Pertemuan / Kediaman Mempelai</p>
+        <p>📍 Kediaman Mempelai Wanita</p>
+        <p style="font-size: 0.85rem; color: #0284c7; font-weight: 600; margin-top: 4px;">
+          Jl. Raya Narogong, Bekasi, Jawa Barat
+        </p>
       </div>
-      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">Buka Google Maps</a>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary btn-pulse">📍 Petunjuk Google Maps</a>
     </section>
 
-    <!-- Galeri Foto Hover Effect -->
-    <section class="card gallery-card" data-aos="fade-up" data-aos-duration="1000">
+    <!-- Galeri Photos Grid -->
+    <section class="card gallery-card" data-aos="fade-up" data-aos-duration="1200">
       <h2 class="section-title">Our Gallery</h2>
       <div class="gallery-grid">
-        <div class="img-wrap" data-aos="flip-left"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Moment 1"></div>
-        <div class="img-wrap" data-aos="flip-right"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Moment 2"></div>
-        <div class="img-wrap" data-aos="flip-left"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600" alt="Moment 3"></div>
-        <div class="img-wrap" data-aos="flip-right"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Moment 4"></div>
+        <div class="img-wrap" data-aos="zoom-in" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Moment 1"></div>
+        <div class="img-wrap" data-aos="zoom-in" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Moment 2"></div>
+        <div class="img-wrap" data-aos="zoom-in" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600" alt="Moment 3"></div>
+        <div class="img-wrap" data-aos="zoom-in" data-aos-delay="400"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Moment 4"></div>
       </div>
     </section>
 
     <!-- Form RSVP -->
-    <section class="card rsvp-card" data-aos="fade-up" data-aos-duration="1000">
+    <section class="card rsvp-card" data-aos="fade-up" data-aos-duration="1200">
       <h2 class="section-title">Konfirmasi Kehadiran</h2>
       <form id="rsvp-form" class="rsvp-form">
-        <input type="text" placeholder="Nama Anda" required class="input-field">
+        <input type="text" placeholder="Nama Lengkap Anda" required class="input-field">
         <select class="input-field" required>
           <option value="">Konfirmasi Kehadiran</option>
-          <option value="Hadir">Hadir</option>
-          <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+          <option value="Hadir">Saya Akan Hadir</option>
+          <option value="Tidak Hadir">Maaf, Halangan Hadir</option>
         </select>
-        <textarea placeholder="Berikan Ucapan & Doa..." rows="3" class="input-field" required></textarea>
-        <button type="submit" class="btn">Kirim Ucapan</button>
+        <textarea placeholder="Tuliskan ucapan & doa terbaik..." rows="3" class="input-field" required></textarea>
+        <button type="submit" class="btn">Kirim Ucapan 💌</button>
       </form>
     </section>
 
   </main>
 
-  <!-- Script Animasi AOS JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       AOS.init({ duration: 1000, once: false, mirror: true });
 
       const openBtn = document.getElementById('open-btn');
-      const cover = document.getElementById('cover');
+      const envelopeWrapper = document.getElementById('envelope-wrapper');
       const mainContent = document.getElementById('main-content');
       const bgMusic = document.getElementById('bg-music');
       const musicBtn = document.getElementById('music-btn');
 
       let isPlaying = false;
 
+      // ANIMASI BUKA AMPLOP
       if (openBtn) {
         openBtn.addEventListener('click', () => {
-          cover.classList.add('slide-up');
+          envelopeWrapper.classList.add('open-envelope');
           
           setTimeout(() => {
-            cover.style.display = 'none';
+            envelopeWrapper.style.display = 'none';
             mainContent.classList.remove('hidden');
             AOS.refresh();
-          }, 800);
+          }, 1000);
 
           if (bgMusic) {
             bgMusic.play().then(() => { isPlaying = true; }).catch(err => console.log(err));
@@ -162,7 +163,7 @@
         });
       }
 
-      // Countdown Timer 5 Des 2026
+      // Countdown Timer
       const targetDate = new Date('December 5, 2026 08:00:00').getTime();
       setInterval(() => {
         const now = new Date().getTime();
