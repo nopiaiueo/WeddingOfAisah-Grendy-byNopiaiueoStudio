@@ -5,67 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan - Aisah & Grendy</title>
   
-  <!-- Font Google Elegant -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   
-  <!-- Animation Library (AOS) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Backsound Musik Romantic Instrument -->
   <audio id="bg-music" loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Tombol Musik Floating -->
-  <button id="music-btn" class="music-btn">🎵</button>
+  <button id="music-btn" class="music-btn spinning">🎵</button>
 
-  <!-- Section 1: Cover Pembuka -->
   <section id="cover" class="cover-section">
-    <div class="flower-frame frame-top">🌸</div>
-    <div class="cover-content" data-aos="zoom-in">
-      <p class="subtitle">The Wedding of</p>
-      <h1 class="font-aesthetic">Aisah & Grendy</h1>
+    <div class="flower float-1">🌸</div>
+    <div class="flower float-2">🌿</div>
+    <div class="flower float-3">✨</div>
+    
+    <div class="cover-content" data-aos="zoom-in" data-aos-duration="1200">
+      <p class="subtitle pulse">The Wedding of</p>
+      <h1 class="font-aesthetic glow-text">Aisah & Grendy</h1>
       <p class="date">Sabtu, 05 Desember 2026</p>
-      <button id="open-btn" class="btn">OPEN INVITATION</button>
+      <button id="open-btn" class="btn btn-bounce">OPEN INVITATION</button>
     </div>
-    <div class="flower-frame frame-bottom">🌸</div>
   </section>
 
-  <!-- Section 2: Konten Utama -->
   <main id="main-content" class="main-content hidden">
     
-    <!-- Quote Card -->
-    <section class="card quote-card" data-aos="fade-up">
-      <div class="floral-icon">🌿</div>
-      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."</p>
+    <section class="card quote-card" data-aos="fade-up" data-aos-duration="1000">
+      <div class="flower-icon rotate">🌿</div>
+      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
       <span>(QS. Ar-Rum: 21)</span>
     </section>
 
-    <!-- Mempelai Card -->
-    <section class="card couple-card" data-aos="fade-up">
-      <h2 class="section-title">Bride & Groom</h2>
+    <section class="card couple-card">
+      <h2 class="section-title" data-aos="fade-down">Bride & Groom</h2>
       
-      <div class="couple-profile" data-aos="fade-right">
+      <div class="couple-profile" data-aos="fade-right" data-aos-duration="1000">
         <h3 class="font-aesthetic">Siti Aisah, S.Pd.</h3>
         <p>Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
 
-      <div class="couple-divider">&</div>
+      <div class="couple-divider pulse">&</div>
 
-      <div class="couple-profile" data-aos="fade-left">
+      <div class="couple-profile" data-aos="fade-left" data-aos-duration="1000">
         <h3 class="font-aesthetic">Grendy, S.Pd.</h3>
         <p>Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
 
-    <!-- Countdown Timer -->
-    <section class="card timer-card" data-aos="fade-up">
+    <section class="card timer-card" data-aos="zoom-in" data-aos-duration="1000">
       <h2 class="section-title">Save The Date</h2>
       <div class="countdown">
         <div class="time-box"><span id="days">00</span><p>Hari</p></div>
@@ -75,8 +68,7 @@
       </div>
     </section>
 
-    <!-- Location & Google Maps Card -->
-    <section class="card location-card" data-aos="fade-up">
+    <section class="card location-card" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Waktu & Lokasi</h2>
       <div class="event-info">
         <h3>Akad & Resepsi</h3>
@@ -84,27 +76,20 @@
         <p>⏰ 08.00 WIB - Selesai</p>
         <p>📍 Gedung Balai Pertemuan / Kediaman Mempelai</p>
       </div>
-      
-      <!-- Embed Google Maps -->
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.28580210344!2d106.78915835!3d-6.250000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e800000001%3A0x1!2sJakarta!5e0!3m2!1sid!2sid!4v1600000000000" width="100%" height="200" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">Buka Google Maps</a>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary btn-pulse">Buka Google Maps</a>
     </section>
 
-    <!-- Galeri Foto Card -->
-    <section class="card gallery-card" data-aos="fade-up">
-      <h2 class="section-title">Our Moments</h2>
+    <section class="card gallery-card" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="section-title">Our Gallery</h2>
       <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Moment 1">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Moment 2">
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600" alt="Moment 3">
-        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Moment 4">
+        <div class="img-wrap" data-aos="flip-left"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Moment 1"></div>
+        <div class="img-wrap" data-aos="flip-right"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Moment 2"></div>
+        <div class="img-wrap" data-aos="flip-left"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600" alt="Moment 3"></div>
+        <div class="img-wrap" data-aos="flip-right"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Moment 4"></div>
       </div>
     </section>
 
-    <!-- Form RSVP & Ucapan -->
-    <section class="card rsvp-card" data-aos="fade-up">
+    <section class="card rsvp-card" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Konfirmasi Kehadiran</h2>
       <form id="rsvp-form" class="rsvp-form">
         <input type="text" placeholder="Nama Anda" required class="input-field">
@@ -118,26 +103,18 @@
       </form>
     </section>
 
-    <!-- Wedding Gift / Amplop Digital Card -->
-    <section class="card gift-card" data-aos="fade-up">
-      <h2 class="section-title">Wedding Gift</h2>
-      <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika ingin memberi hadiah, dapat melalui:</p>
-      <div class="bank-box">
-        <h4>Bank BCA</h4>
-        <p class="rekening">1234567890</p>
-        <p>a.n. Siti Aisah</p>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Script Animasi AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   
-  <!-- Logika JS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({ duration: 1000, once: true });
+      // Inisialisasi Animasi AOS
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+      });
 
       const openBtn = document.getElementById('open-btn');
       const cover = document.getElementById('cover');
@@ -147,14 +124,21 @@
 
       let isPlaying = false;
 
+      // Animasi Buka Undangan (Slide UP & Fade)
       if (openBtn) {
         openBtn.addEventListener('click', () => {
-          cover.style.display = 'none';
-          mainContent.classList.remove('hidden');
-          window.dispatchEvent(new Event('resize')); // Refresh animasi AOS
+          cover.classList.add('slide-up');
           
+          setTimeout(() => {
+            cover.style.display = 'none';
+            mainContent.classList.remove('hidden');
+            AOS.refresh(); // Refresh posisi animasi
+          }, 800);
+
           if (bgMusic) {
-            bgMusic.play().then(() => { isPlaying = true; }).catch(err => console.log(err));
+            bgMusic.play().then(() => {
+              isPlaying = true;
+            }).catch(err => console.log(err));
           }
         });
       }
@@ -164,16 +148,18 @@
           if (isPlaying) {
             bgMusic.pause();
             isPlaying = false;
+            musicBtn.classList.remove('spinning');
             musicBtn.innerText = '🔇';
           } else {
             bgMusic.play();
             isPlaying = true;
+            musicBtn.classList.add('spinning');
             musicBtn.innerText = '🎵';
           }
         });
       }
 
-      // Countdown Timer 5 Des 2026
+      // Countdown Timer
       const targetDate = new Date('December 5, 2026 08:00:00').getTime();
       setInterval(() => {
         const now = new Date().getTime();
@@ -186,13 +172,6 @@
           document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
         }
       }, 1000);
-
-      // RSVP Form Handler
-      document.getElementById('rsvp-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Terima kasih atas konfirmasi dan ucapan Anda!');
-        e.target.reset();
-      });
     });
   </script>
 </body>
