@@ -5,22 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan - Aisah & Grendy</title>
   
+  <!-- Font & Animasi AOS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Backsound Musik Romantic Instrument -->
   <audio id="bg-music" loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- Tombol Musik Floating Berputar -->
   <button id="music-btn" class="music-btn spinning">🎵</button>
 
+  <!-- Section 1: Cover Pembuka Beranimasi -->
   <section id="cover" class="cover-section">
     <div class="flower float-1">🌸</div>
     <div class="flower float-2">🌿</div>
@@ -34,14 +37,17 @@
     </div>
   </section>
 
+  <!-- Section 2: Konten Utama -->
   <main id="main-content" class="main-content hidden">
     
+    <!-- Quote Card -->
     <section class="card quote-card" data-aos="fade-up" data-aos-duration="1000">
       <div class="flower-icon rotate">🌿</div>
       <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
       <span>(QS. Ar-Rum: 21)</span>
     </section>
 
+    <!-- Mempelai Card -->
     <section class="card couple-card">
       <h2 class="section-title" data-aos="fade-down">Bride & Groom</h2>
       
@@ -58,6 +64,7 @@
       </div>
     </section>
 
+    <!-- Countdown Timer -->
     <section class="card timer-card" data-aos="zoom-in" data-aos-duration="1000">
       <h2 class="section-title">Save The Date</h2>
       <div class="countdown">
@@ -68,6 +75,7 @@
       </div>
     </section>
 
+    <!-- Lokasi & Peta -->
     <section class="card location-card" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Waktu & Lokasi</h2>
       <div class="event-info">
@@ -76,9 +84,10 @@
         <p>⏰ 08.00 WIB - Selesai</p>
         <p>📍 Gedung Balai Pertemuan / Kediaman Mempelai</p>
       </div>
-      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary btn-pulse">Buka Google Maps</a>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">Buka Google Maps</a>
     </section>
 
+    <!-- Galeri Foto Hover Effect -->
     <section class="card gallery-card" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Our Gallery</h2>
       <div class="gallery-grid">
@@ -89,6 +98,7 @@
       </div>
     </section>
 
+    <!-- Form RSVP -->
     <section class="card rsvp-card" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Konfirmasi Kehadiran</h2>
       <form id="rsvp-form" class="rsvp-form">
@@ -105,16 +115,12 @@
 
   </main>
 
+  <!-- Script Animasi AOS JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Inisialisasi Animasi AOS
-      AOS.init({
-        duration: 1000,
-        once: false,
-        mirror: true
-      });
+      AOS.init({ duration: 1000, once: false, mirror: true });
 
       const openBtn = document.getElementById('open-btn');
       const cover = document.getElementById('cover');
@@ -124,7 +130,6 @@
 
       let isPlaying = false;
 
-      // Animasi Buka Undangan (Slide UP & Fade)
       if (openBtn) {
         openBtn.addEventListener('click', () => {
           cover.classList.add('slide-up');
@@ -132,13 +137,11 @@
           setTimeout(() => {
             cover.style.display = 'none';
             mainContent.classList.remove('hidden');
-            AOS.refresh(); // Refresh posisi animasi
+            AOS.refresh();
           }, 800);
 
           if (bgMusic) {
-            bgMusic.play().then(() => {
-              isPlaying = true;
-            }).catch(err => console.log(err));
+            bgMusic.play().then(() => { isPlaying = true; }).catch(err => console.log(err));
           }
         });
       }
@@ -159,7 +162,7 @@
         });
       }
 
-      // Countdown Timer
+      // Countdown Timer 5 Des 2026
       const targetDate = new Date('December 5, 2026 08:00:00').getTime();
       setInterval(() => {
         const now = new Date().getTime();
@@ -168,7 +171,7 @@
         if (diff > 0) {
           document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
           document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60)) / (1000 * 60));
           document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
         }
       }, 1000);
