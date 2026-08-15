@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,8 +37,27 @@
   <!-- KONTEN UTAMA UNDANGAN -->
   <main id="main-content" class="main-content hidden">
     
-    <!-- Section Quote -->
-    <section class="card quote-card" data-aos="zoom-in-up" data-aos-duration="1200">
+    <!-- SECTION ANIMASI GERBANG TERBUKA (GATE HERO) -->
+    <section class="gate-section">
+      <!-- Pintu Kiri & Kanan -->
+      <div class="gate-door gate-left"></div>
+      <div class="gate-door gate-right"></div>
+      
+      <!-- Isi Konten di Dalam Gerbang -->
+      <div class="gate-content" data-aos="zoom-in" data-aos-duration="1500">
+        <div class="wreath">🌿 🌸 🌿</div>
+        <p class="gate-subtitle">THE WEDDING OF</p>
+        <h1 class="font-aesthetic gate-title">Aisah & Grendy</h1>
+        <p class="gate-date">05 . 12 . 2026</p>
+        <div class="scroll-indicator">
+          <span>Scroll Down</span>
+          <div class="arrow-down">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Quote (Ar-Rum) -->
+    <section class="card quote-card" data-aos="fade-up" data-aos-duration="1200">
       <div class="flower-spin">🌿</div>
       <p class="quote-text">"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."</p>
       <span class="quote-src">(QS. Ar-Rum: 21)</span>
@@ -74,7 +93,7 @@
       </div>
     </section>
 
-    <!-- Waktu & Lokasi (Sudah Di-update!) -->
+    <!-- Waktu & Lokasi -->
     <section class="card location-card" data-aos="fade-up" data-aos-duration="1200">
       <h2 class="section-title">Waktu & Lokasi</h2>
       <div class="event-info">
@@ -130,7 +149,7 @@
 
       let isPlaying = false;
 
-      // ANIMASI BUKA AMPLOP
+      // ANIMASI BUKA AMPLOP & BUKA GERBANG
       if (openBtn) {
         openBtn.addEventListener('click', () => {
           envelopeWrapper.classList.add('open-envelope');
@@ -138,7 +157,14 @@
           setTimeout(() => {
             envelopeWrapper.style.display = 'none';
             mainContent.classList.remove('hidden');
-            AOS.refresh();
+            
+            // Trigger Animasi Gerbang Terbuka
+            setTimeout(() => {
+              document.querySelector('.gate-left').classList.add('open-left');
+              document.querySelector('.gate-right').classList.add('open-right');
+              AOS.refresh();
+            }, 300);
+
           }, 1000);
 
           if (bgMusic) {
