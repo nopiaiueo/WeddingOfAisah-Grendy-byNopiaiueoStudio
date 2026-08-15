@@ -6,7 +6,7 @@
   font-family: 'Georgia', serif;
 }
 
-/* Background Halaman utama jadi Biru Langit Lembut */
+/* Background Utama: Biru Langit Lembut */
 body {
   background-color: #f0f7ff;
   color: #2c3e50;
@@ -19,23 +19,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Overlay putih transparan di atas background */
-  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+  background: linear-gradient(rgba(240, 247, 255, 0.85), rgba(240, 247, 255, 0.85)),
               url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000') center/cover;
-  transition: opacity 1s ease, transform 1s ease;
 }
 
 .cover-content h1 {
   font-size: 2.5rem;
   margin: 15px 0;
-  color: #4a90e2; /* Teks nama mempelai jadi Biru Langit */
+  color: #4a90e2; /* Teks Biru Langit */
 }
 
-/* Tombol Utama (Buka Undangan) */
+.subtitle, .date {
+  color: #5c6b73;
+}
+
+/* Tombol Utama */
 .btn {
   padding: 12px 25px;
-  background-color: #4a90e2; /* Tombol Biru Langit */
-  color: #ffffff; /* Teks Putih */
+  background-color: #4a90e2;
+  color: #ffffff;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -47,7 +49,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #3a7bc8; /* Saat disentuh/diklik jadi biru lebih gelap */
+  background-color: #3a7bc8;
 }
 
 /* Tombol Musik Floating */
@@ -58,18 +60,18 @@ body {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: #4a90e2; /* Tombol Musik Biru Langit */
+  background-color: #4a90e2;
   color: #ffffff;
-  border: 2px solid #ffffff; /* Lis Putih */
+  border: 2px solid #ffffff;
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 99;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Main Content */
+/* Konten Utama */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .main-content {
@@ -78,42 +80,54 @@ body {
   padding: 20px;
 }
 
-/* Kartu Konten (Background Putih Bersih) */
+/* Kartu Putih Bersih */
 .card {
-  background: #ffffff; /* Kartu serba putih */
+  background: #ffffff;
   padding: 30px 20px;
   margin-bottom: 25px;
   border-radius: 15px;
-  border: 1px solid #e1eeef; /* Garis tepi biru sangat muda */
+  border: 1px solid #e1eeef;
   box-shadow: 0 4px 15px rgba(74, 144, 226, 0.08);
 }
 
 .card h2 {
-  color: #4a90e2; /* Judul section jadi Biru Langit */
+  color: #4a90e2;
+  margin-bottom: 15px;
 }
 
-/* Countdown Box */
+.couple-profile h3 {
+  color: #4a90e2;
+  margin-top: 10px;
+}
+
+.couple-divider {
+  font-size: 1.8rem;
+  color: #4a90e2;
+  margin: 15px 0;
+}
+
+/* Countdown Box Biru */
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   margin-top: 20px;
 }
 
-/* Kotak Angka Countdown (Biru Langit dengan Teks Putih) */
 .time-box {
-  background: #4a90e2; 
+  background: #4a90e2;
   color: #ffffff;
   padding: 10px;
   border-radius: 8px;
-  min-width: 60px;
+  min-width: 65px;
 }
 
 .time-box span {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .time-box p {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  margin-top: 3px;
 }
