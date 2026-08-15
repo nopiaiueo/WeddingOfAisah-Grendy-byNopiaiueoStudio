@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #f0f7ff;
@@ -18,11 +10,8 @@ body {
   overflow-x: hidden;
 }
 
-.font-aesthetic {
-  font-family: 'Alex Brush', cursive;
-}
+.font-aesthetic { font-family: 'Alex Brush', cursive; }
 
-/* --- ANIMASI KEYFRAMES --- */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-15px) rotate(10deg); }
@@ -44,7 +33,6 @@ body {
   60% { transform: translateY(-5px); }
 }
 
-/* Element Animasi */
 .float-1 { animation: float 4s ease-in-out infinite; top: 10%; left: 8%; position: absolute; font-size: 2rem; }
 .float-2 { animation: float 5s ease-in-out infinite 1s; bottom: 12%; right: 8%; position: absolute; font-size: 2.2rem; }
 .float-3 { animation: float 3.5s ease-in-out infinite 0.5s; top: 15%; right: 12%; position: absolute; font-size: 1.5rem; }
@@ -53,7 +41,6 @@ body {
 .btn-bounce { animation: bounce 2s infinite; }
 .spinning { animation: spin 4s linear infinite; }
 
-/* Section Cover */
 .cover-section {
   height: 100vh;
   display: flex;
@@ -74,7 +61,6 @@ body {
   font-size: 4rem;
   color: #3b82f6;
   margin: 10px 0;
-  text-shadow: 0 2px 10px rgba(59, 130, 246, 0.2);
 }
 
 .subtitle {
@@ -84,7 +70,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* Tombol Utama */
 .btn {
   padding: 12px 32px;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
@@ -100,18 +85,12 @@ body {
   display: inline-block;
 }
 
-.btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
-}
-
 .btn-secondary {
   background: transparent;
   color: #3b82f6;
   border: 2px solid #3b82f6;
 }
 
-/* Tombol Musik Floating */
 .music-btn {
   position: fixed;
   bottom: 25px;
@@ -128,7 +107,6 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Layout Konten Utama */
 .hidden { display: none !important; }
 
 .main-content {
@@ -137,7 +115,6 @@ body {
   padding: 25px 15px;
 }
 
-/* Kartu Design Aesthetic */
 .card {
   background: #ffffff;
   padding: 30px 20px;
@@ -145,86 +122,32 @@ body {
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
   border: 1px solid #e2e8f0;
-  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+.section-title { color: #3b82f6; font-size: 1.5rem; margin-bottom: 20px; }
+.couple-profile h3 { font-size: 2.8rem; color: #2563eb; margin-bottom: 5px; }
+.couple-divider { font-size: 2.2rem; color: #93c5fd; margin: 15px 0; }
 
-.section-title {
-  color: #3b82f6;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.couple-profile h3 {
-  font-size: 2.8rem;
-  color: #2563eb;
-  margin-bottom: 5px;
-}
-
-.couple-divider {
-  font-size: 2.2rem;
-  color: #93c5fd;
-  margin: 15px 0;
-}
-
-/* Countdown */
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
+.countdown { display: flex; justify-content: center; gap: 12px; }
 .time-box {
   background: linear-gradient(135deg, #60a5fa, #2563eb);
   color: white;
   padding: 12px;
   border-radius: 14px;
   min-width: 65px;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
 }
-
 .time-box span { font-size: 1.5rem; font-weight: bold; }
 .time-box p { font-size: 0.7rem; }
 
-/* Galeri Photo Grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.img-wrap { overflow: hidden; border-radius: 14px; }
+.gallery-grid img { width: 100%; height: 140px; object-fit: cover; }
 
-.img-wrap {
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.img-wrap:hover img {
-  transform: scale(1.15) rotate(2deg);
-}
-
-/* Form RSVP */
 .rsvp-form { display: flex; flex-direction: column; gap: 12px; }
-
 .input-field {
   padding: 12px 15px;
   border: 1px solid #cbd5e1;
   border-radius: 12px;
   font-size: 0.9rem;
   outline: none;
-  transition: 0.3s;
-}
-
-.input-field:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
 }
