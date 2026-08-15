@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Pernikahan</title>
-  <!-- Menghubungkan ke css/style.css secara langsung -->
+  <title>Undangan Pernikahan - Aisah & Grendy</title>
+  <!-- Menghubungkan ke css/style.css -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,12 +40,12 @@
     <section class="card couple-card">
       <h2>Bride & Groom</h2>
       <div class="couple-profile">
-        <h3>Siti Aisah</h3>
+        <h3>Siti Aisah, S.Pd.</h3>
         <p>Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
       <div class="couple-divider">&</div>
       <div class="couple-profile">
-        <h3>Grendy</h3>
+        <h3>Grendy, S.Pd.</h3>
         <p>Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
@@ -63,7 +63,72 @@
 
   </main>
 
-  <!-- Menghubungkan ke js/script.js secara langsung -->
-  <script src="js/script.js"></script>
+  <!-- KODE JS LANGSUNG DIDALAM HTML (ANTI GAGAL) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('open-btn');
+      const cover = document.getElementById('cover');
+      const mainContent = document.getElementById('main-content');
+      const bgMusic = document.getElementById('bg-music');
+      const musicBtn = document.getElementById('music-btn');
+
+      let isPlaying = false;
+
+      // 1. Fungsi Buka Undangan & Putar Musik
+      if (openBtn) {
+        openBtn.addEventListener('click', () => {
+          if (cover) cover.style.display = 'none';
+          if (mainContent) mainContent.classList.remove('hidden');
+
+          if (bgMusic) {
+            bgMusic.play().then(() => {
+              isPlaying = true;
+              if (musicBtn) musicBtn.innerText = '🎵';
+            }).catch(err => {
+              console.log("Audio play blocked by browser:", err);
+            });
+          }
+        });
+      }
+
+      // 2. Tombol Play/Pause Musik
+      if (musicBtn) {
+        musicBtn.addEventListener('click', () => {
+          if (isPlaying) {
+            bgMusic.pause();
+            isPlaying = false;
+            musicBtn.innerText = '🔇';
+          } else {
+            bgMusic.play();
+            isPlaying = true;
+            musicBtn.innerText = '🎵';
+          }
+        });
+      }
+
+      // 3. Hitung Mundur ke 5 Desember 2026
+      const targetDate = new Date('December 5, 2026 08:00:00').getTime();
+
+      setInterval(() => {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          if (document.getElementById('days')) document.getElementById('days').innerText = days;
+          if (document.getElementById('hours')) document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+          if (document.getElementById('minutes')) document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+          if (document.getElementById('seconds')) document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+        } else {
+          const timerContainer = document.querySelector('.countdown');
+          if (timerContainer) timerContainer.innerHTML = "<h3>Acara Telah Berlangsung!</h3>";
+        }
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
