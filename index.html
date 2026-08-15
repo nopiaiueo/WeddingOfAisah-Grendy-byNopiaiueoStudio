@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Backsound (Ganti link audio sesuai keinginan) -->
+  <audio id="bg-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tombol Musik Floating -->
+  <button id="music-btn" class="music-btn">🎵</button>
+
+  <!-- Section 1: Cover Pembuka -->
+  <section id="cover" class="cover-section">
+    <div class="cover-content">
+      <p class="subtitle">The Wedding of</p>
+      <h1>Habib & Adiba</h1>
+      <p class="date">26 . 04 . 2026</p>
+      <button id="open-btn" class="btn">OPEN INVITATION</button>
+    </div>
+  </section>
+
+  <!-- Section 2: Konten Utama (Tersembunyi di awal) -->
+  <main id="main-content" class="main-content hidden">
+    
+    <!-- Ayat / Quote -->
+    <section class="card quote-card">
+      <p>"Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
+      <span>(QS. Ar-Rum: 21)</span>
+    </section>
+
+    <!-- Mempelai -->
+    <section class="card couple-card">
+      <h2>Bride & Groom</h2>
+      <div class="couple-profile">
+        <h3>Habib Yulianto</h3>
+        <p>Putra Pertama dari Bapak Anas & Ibu Kholifah</p>
+      </div>
+      <div class="couple-divider">&</div>
+      <div class="couple-profile">
+        <h3>Adiba Putri Syakila</h3>
+        <p>Putri Kedua dari Bapak M. Dawam & Ibu Dewi</p>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="card timer-card">
+      <h2>Save The Date</h2>
+      <div class="countdown">
+        <div class="time-box"><span id="days">00</span><p>Hari</p></div>
+        <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
+        <div class="time-box"><span id="minutes">00</span><p>Menit</p></div>
+        <div class="time-box"><span id="seconds">00</span><p>Detik</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
