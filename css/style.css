@@ -1,133 +1,210 @@
-/* Reset & Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Georgia', serif;
 }
 
-/* Background Utama: Biru Langit Lembut */
 body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #f0f7ff;
-  color: #2c3e50;
+  color: #334155;
   text-align: center;
 }
 
-/* Cover Section */
+.font-aesthetic {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Section Cover & Frame Bunga */
 .cover-section {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   background: linear-gradient(rgba(240, 247, 255, 0.85), rgba(240, 247, 255, 0.85)),
               url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000') center/cover;
 }
 
-.cover-content h1 {
+.flower-frame {
   font-size: 2.5rem;
-  margin: 15px 0;
-  color: #4a90e2; /* Teks Biru Langit */
+  position: absolute;
+}
+.frame-top { top: 20px; }
+.frame-bottom { bottom: 20px; }
+
+.cover-content h1 {
+  font-size: 3.8rem;
+  color: #3b82f6;
+  margin: 10px 0;
 }
 
-.subtitle, .date {
-  color: #5c6b73;
+.subtitle {
+  letter-spacing: 2px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
-/* Tombol Utama */
+.date {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Buttons */
 .btn {
-  padding: 12px 25px;
-  background-color: #4a90e2;
-  color: #ffffff;
+  padding: 12px 30px;
+  background-color: #3b82f6;
+  color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 0.9rem;
-  letter-spacing: 1px;
   margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
-  background-color: #3a7bc8;
+  background-color: #2563eb;
+  transform: translateY(-2px);
 }
 
-/* Tombol Musik Floating */
+.btn-secondary {
+  background-color: #ffffff;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  margin-top: 15px;
+}
+
+/* Floating Music */
 .music-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #4a90e2;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  background-color: #3b82f6;
+  color: white;
+  border: 2px solid white;
   font-size: 1.2rem;
   cursor: pointer;
-  z-index: 99;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Konten Utama */
-.hidden {
-  display: none !important;
-}
+/* Card & Content */
+.hidden { display: none !important; }
 
 .main-content {
-  max-width: 500px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px 15px;
 }
 
-/* Kartu Putih Bersih */
 .card {
   background: #ffffff;
   padding: 30px 20px;
   margin-bottom: 25px;
-  border-radius: 15px;
-  border: 1px solid #e1eeef;
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);
+  border: 1px solid #e2e8f0;
 }
 
-.card h2 {
-  color: #4a90e2;
-  margin-bottom: 15px;
+.section-title {
+  color: #3b82f6;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
 }
 
+/* Mempelai */
 .couple-profile h3 {
-  color: #4a90e2;
-  margin-top: 10px;
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 5px;
 }
 
 .couple-divider {
-  font-size: 1.8rem;
-  color: #4a90e2;
+  font-size: 2rem;
+  color: #93c5fd;
   margin: 15px 0;
 }
 
-/* Countdown Box Biru */
+/* Countdown */
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 10px;
 }
 
 .time-box {
-  background: #4a90e2;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
   min-width: 65px;
 }
 
 .time-box span {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .time-box p {
-  font-size: 0.75rem;
-  margin-top: 3px;
+  font-size: 0.7rem;
+}
+
+/* Galeri Photo Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Form RSVP */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+}
+
+/* Bank Box */
+.bank-box {
+  background: #eff6ff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  border: 1px dashed #93c5fd;
+}
+.rekening {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1e40af;
+  letter-spacing: 1px;
 }
