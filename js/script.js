@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Logika Countdown Timer
-  const targetDate = new Date('April 26, 2026 08:00:00').getTime();
+  const targetDate = new Date('Desember 5, 2026 08:00:00').getTime();
 
   const updateCountdown = setInterval(() => {
     const now = new Date().getTime();
