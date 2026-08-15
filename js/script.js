@@ -1,6 +1,4 @@
-// Menunggu semua komponen web siap
 document.addEventListener('DOMContentLoaded', () => {
-
   const openBtn = document.getElementById('open-btn');
   const cover = document.getElementById('cover');
   const mainContent = document.getElementById('main-content');
@@ -9,17 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isPlaying = false;
 
-  // 1. Fungsi Buka Undangan & Putar Musik
+  // 1. Fungsi Buka Undangan
   if (openBtn) {
     openBtn.addEventListener('click', () => {
-      cover.style.display = 'none';
-      mainContent.classList.remove('hidden');
-      
-      bgMusic.play().then(() => {
-        isPlaying = true;
-      }).catch(err => {
-        console.log("Audio play failed:", err);
-      });
+      // Sembunyikan Cover & Tampilkan Konten
+      if (cover) cover.style.display = 'none';
+      if (mainContent) mainContent.classList.remove('hidden');
+
+      // Coba putar musik (kalau gagal/diblokir browser, web tetap bisa terbuka)
+      if (bgMusic) {
+        bgMusic.play().then(() => {
+          isPlaying = true;
+          if (musicBtn) musicBtn.innerText = '🎵';
+        }).catch(err => {
+          console.log("Audio diblokir browser:", err);
+        });
+      }
     });
   }
 
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Logika Countdown Timer
-  const targetDate = new Date('Desember 5, 2026 08:00:00').getTime();
+  const targetDate = new Date('April 26, 2026 08:00:00').getTime();
 
   const updateCountdown = setInterval(() => {
     const now = new Date().getTime();
@@ -47,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (difference < 0) {
       clearInterval(updateCountdown);
-      const timerContainer = document.querySelector('.countdown');
-      if (timerContainer) {
-        timerContainer.innerHTML = "<h3>Acara Telah Berlangsung!</h3>";
-      }
+      const timerBox = document.querySelector('.countdown');
+      if (timerBox) timerBox.innerHTML = "<h3>Acara Telah Berlangsung!</h3>";
       return;
     }
 
@@ -59,15 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
+    const d = document.getElementById('days');
+    const h = document.getElementById('hours');
+    const m = document.getElementById('minutes');
+    const s = document.getElementById('seconds');
 
-    if (daysEl) daysEl.innerText = days;
-    if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
-    if (minutesEl) minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
-    if (secondsEl) secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+    if (d) d.innerText = days;
+    if (h) h.innerText = hours < 10 ? '0' + hours : hours;
+    if (m) m.innerText = minutes < 10 ? '0' + minutes : minutes;
+    if (s) s.innerText = seconds < 10 ? '0' + seconds : seconds;
   }, 1000);
-
 });
