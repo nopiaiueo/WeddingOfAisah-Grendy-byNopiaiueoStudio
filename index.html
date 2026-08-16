@@ -7,85 +7,64 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&family=Cinzel:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Musik Backsound -->
   <audio id="bg-music" loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
   <button id="music-btn" class="music-btn spinning">🎵</button>
 
-  <!-- COVER AMPLOP / PINTU UTAMA -->
-  <div id="envelope-wrapper" class="envelope-wrapper">
-    <!-- Pintu Vintage Kiri & Kanan -->
-    <div class="vintage-door door-left"></div>
-    <div class="vintage-door door-right"></div>
-    
-    <!-- Bingkai Bunga Atas & Bawah -->
-    <div class="door-flower top-flower">🌹 🌸 🌹</div>
-    
-    <div class="open-box">
-      <button id="open-btn" class="btn btn-open">Buka Undangan ✉️</button>
+  <div id="cover" class="cover-wrapper">
+    <div class="cover-card">
+      <p class="canva-title-top">THESE COUPLE ARE</p>
+      <h1 class="canva-title-main">Getting Married!</h1>
+      
+      <div class="canva-avatar-frame">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400" alt="Aisah & Grendy">
+      </div>
+
+      <h2 class="canva-couple-names">AISAH & GRENDY</h2>
+      <p class="canva-date">05 • 12 • 2026</p>
+      
+      <p class="canva-dear">Dear,<br>Tamu Undangan</p>
+      
+      <button id="open-btn" class="btn-canva-open">
+        ✉️ Open Invitation
+      </button>
     </div>
   </div>
 
-  <!-- KONTEN UTAMA UNDANGAN -->
   <main id="main-content" class="main-content hidden">
-    
-    <!-- SECTION HERO (ISTANA & AIR MANCUR TERBUKA) -->
-    <section class="hero-section">
-      <div class="castle-bg"></div>
-      <div class="fountain-anim">⛲</div>
-      
-      <div class="hero-text" data-aos="zoom-in" data-aos-duration="1500">
-        <p class="sub-hero">The Wedding of</p>
-        <h1 class="font-aesthetic main-title">Aisah & Grendy</h1>
-        <p class="hero-date">05 . 12 . 2026</p>
-        <a href="#quote-sec" class="btn btn-save">SAVE THE DATE</a>
-      </div>
-    </section>
 
-    <!-- SECTION QUOTE (QS. AR-RUM: 21) -->
     <section id="quote-sec" class="card quote-card" data-aos="fade-up" data-aos-duration="1200">
-      <div class="flower-center">🌸 🌹 🌸</div>
       <p class="quote-text">
         "Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
       </p>
-      <span class="quote-src">(Qs. Ar-Rum : 21)</span>
+      <span class="quote-src">(QS. Ar-Rum: 21)</span>
     </section>
 
-    <!-- SECTION MEMPELAI (BRIDE & GROOM) -->
     <section class="card couple-card" data-aos="fade-up" data-aos-duration="1200">
       <h2 class="font-aesthetic section-title-lg">Bride & Groom</h2>
       <p class="intro-p">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami :</p>
       
-      <!-- Groom -->
       <div class="couple-box" data-aos="fade-up">
-        <div class="photo-frame">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" alt="Grendy">
-        </div>
-        <h3 class="font-aesthetic couple-name">Grendy, S.Pd.</h3>
-        <p class="parents">Putra Pertama dari Bapak xxx & Ibu xxx</p>
+        <h3 class="font-aesthetic couple-name">Siti Aisah, S.Pd.</h3>
+        <p class="parents">Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
 
       <div class="couple-ampersand font-aesthetic">&</div>
 
-      <!-- Bride -->
       <div class="couple-box" data-aos="fade-up">
-        <div class="photo-frame">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400" alt="Aisah">
-        </div>
-        <h3 class="font-aesthetic couple-name">Siti Aisah, S.Pd.</h3>
-        <p class="parents">Putri Kedua dari Bapak xxx & Ibu xxx</p>
+        <h3 class="font-aesthetic couple-name">Grendy, S.Pd.</h3>
+        <p class="parents">Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
 
-    <!-- COUNTDOWN TIMER -->
     <section class="card timer-card" data-aos="flip-up" data-aos-duration="1200">
       <h2 class="font-aesthetic section-title-lg">Save The Date</h2>
       <div class="countdown">
@@ -96,48 +75,20 @@
       </div>
     </section>
 
-    <!-- AKAD & RESEPSI -->
-    <section class="card event-card" data-aos="fade-up">
-      <div class="arch-box">
-        <h3 class="font-aesthetic arch-title">Akad Nikah</h3>
-        <p class="event-date">Sabtu, 05 Desember 2026</p>
-        <p class="event-time">Pukul : 08.00 WIB</p>
-        <p class="event-address">📍 Kediaman Mempelai Wanita<br>Jl. Raya Narogong, Bekasi, Jawa Barat</p>
-        <a href="https://maps.google.com" target="_blank" class="btn btn-map">📍 LOKASI ACARA</a>
+    <section class="card location-card" data-aos="fade-up" data-aos-duration="1200">
+      <h2 class="font-aesthetic section-title-lg">Waktu & Lokasi</h2>
+      <div class="event-info">
+        <h3>Akad & Resepsi</h3>
+        <p>🗓️ Sabtu, 05 Desember 2026</p>
+        <p>⏰ 08.00 WIB - Selesai</p>
+        <p>📍 Kediaman Mempelai Wanita</p>
+        <p style="font-size: 0.85rem; color: #0284c7; font-weight: 600; margin-top: 4px;">
+          Jl. Raya Narogong, Bekasi, Jawa Barat
+        </p>
       </div>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-map">📍 Petunjuk Google Maps</a>
     </section>
 
-    <section class="card event-card" data-aos="fade-up">
-      <div class="arch-box">
-        <h3 class="font-aesthetic arch-title">Resepsi</h3>
-        <p class="event-date">Sabtu, 05 Desember 2026</p>
-        <p class="event-time">Pukul : 11.00 WIB – Selesai</p>
-        <p class="event-address">📍 Kediaman Mempelai Wanita<br>Jl. Raya Narogong, Bekasi, Jawa Barat</p>
-        <a href="https://maps.google.com" target="_blank" class="btn btn-map">📍 LOKASI ACARA</a>
-      </div>
-    </section>
-
-    <!-- LOVE STORY -->
-    <section class="card story-card" data-aos="fade-up">
-      <h2 class="font-aesthetic section-title-lg">Love Story</h2>
-      <div class="story-item">
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=500" class="story-img" alt="Pertemuan">
-        <h4>Awal Bertemu</h4>
-        <p>Berawal dari teman kuliah yang bersama-sama memperjuangkan cita-cita, kami bertemu pada tahun 2020...</p>
-      </div>
-    </section>
-
-    <!-- GALERI FOTO -->
-    <section class="card gallery-card" data-aos="fade-up">
-      <h2 class="font-aesthetic section-title-lg">Galeri Foto</h2>
-      <div class="gallery-stack">
-        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600" alt="Foto 1">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Foto 2">
-        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="Foto 3">
-      </div>
-    </section>
-
-    <!-- WEDDING GIFT -->
     <section class="card gift-card" data-aos="fade-up">
       <h2 class="font-aesthetic section-title-lg">Wedding Gift</h2>
       <p class="gift-desc">Bagi Bapak/Ibu/Saudara/i yang ingin memberikan hadiah pernikahan dapat melalui virtual account / e-wallet di bawah ini:</p>
@@ -157,9 +108,8 @@
       </div>
     </section>
 
-    <!-- UCAPAN & RSVP -->
     <section class="card rsvp-card" data-aos="fade-up">
-      <h2 class="font-aesthetic section-title-lg">Ucapan Sesuatu</h2>
+      <h2 class="font-aesthetic section-title-lg">Ucapan & Doa</h2>
       <form id="rsvp-form" class="rsvp-form">
         <input type="text" placeholder="Nama Lengkap" required class="input-field">
         <textarea placeholder="Berikan ucapan dan doa terbaik..." rows="3" class="input-field" required></textarea>
@@ -173,82 +123,12 @@
     </section>
 
     <footer class="footer">
-      <p class="font-aesthetic" style="font-size: 2rem; color: #881337;">Aisah & Grendy</p>
-      <p style="font-size: 0.75rem; color: #9f1239; margin-top: 10px;">Created with ❤️ nopiaiueo_studio</p>
+      <p class="font-aesthetic" style="font-size: 2rem; color: #0284c7;">Aisah & Grendy</p>
     </footer>
 
   </main>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({ duration: 1000, once: false });
-
-      const openBtn = document.getElementById('open-btn');
-      const envelopeWrapper = document.getElementById('envelope-wrapper');
-      const mainContent = document.getElementById('main-content');
-      const bgMusic = document.getElementById('bg-music');
-      const musicBtn = document.getElementById('music-btn');
-
-      let isPlaying = false;
-
-      // ANIMASI PINTU TERBUKA KIRI & KANAN (PERSIS SEPERTI VIDEO)
-      if (openBtn) {
-        openBtn.addEventListener('click', () => {
-          document.querySelector('.door-left').classList.add('open-door-left');
-          document.querySelector('.door-right').classList.add('open-door-right');
-          openBtn.style.opacity = '0';
-
-          setTimeout(() => {
-            envelopeWrapper.style.opacity = '0';
-            setTimeout(() => {
-              envelopeWrapper.style.display = 'none';
-              mainContent.classList.remove('hidden');
-              AOS.refresh();
-            }, 600);
-          }, 1200);
-
-          if (bgMusic) {
-            bgMusic.play().then(() => { isPlaying = true; }).catch(err => console.log(err));
-          }
-        });
-      }
-
-      if (musicBtn) {
-        musicBtn.addEventListener('click', () => {
-          if (isPlaying) {
-            bgMusic.pause();
-            isPlaying = false;
-            musicBtn.classList.remove('spinning');
-            musicBtn.innerText = '🔇';
-          } else {
-            bgMusic.play();
-            isPlaying = true;
-            musicBtn.classList.add('spinning');
-            musicBtn.innerText = '🎵';
-          }
-        });
-      }
-
-      // Countdown Timer
-      const targetDate = new Date('December 5, 2026 08:00:00').getTime();
-      setInterval(() => {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-
-        if (diff > 0) {
-          document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-          document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60)) / (1000 * 60));
-          document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
-        }
-      }, 1000);
-    });
-
-    function copyText(text) {
-      navigator.clipboard.writeText(text);
-      alert('Nomor rekening/e-wallet berhasil disalin!');
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
