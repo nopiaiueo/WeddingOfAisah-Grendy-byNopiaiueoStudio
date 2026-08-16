@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&family=Cinzel:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,52 +21,42 @@
 
   <div id="cover" class="cover-wrapper">
     <div class="cover-card">
-      <p class="canva-title-top">THESE COUPLE ARE</p>
-      <h1 class="canva-title-main">Getting Married!</h1>
       
-      <div class="canva-avatar-frame">
-        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400" alt="Aisah & Grendy">
-      </div>
-
-      <h2 class="canva-couple-names">AISAH & GRENDY</h2>
-      <p class="canva-date">05 • 12 • 2026</p>
-      
-      <p class="canva-dear">Dear,<br>Tamu Undangan</p>
-      
-      <button id="open-btn" class="btn-canva-open">
-        ✉️ Open Invitation
+      <button id="open-btn" class="btn-open-invitation">
+        📩 Open Invitation
       </button>
+
     </div>
   </div>
 
   <main id="main-content" class="main-content hidden">
 
-    <section id="quote-sec" class="card quote-card" data-aos="fade-up" data-aos-duration="1200">
+    <section class="card quote-card" data-aos="fade-up">
       <p class="quote-text">
         "Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
       </p>
       <span class="quote-src">(QS. Ar-Rum: 21)</span>
     </section>
 
-    <section class="card couple-card" data-aos="fade-up" data-aos-duration="1200">
-      <h2 class="font-aesthetic section-title-lg">Bride & Groom</h2>
+    <section class="card couple-card" data-aos="fade-up">
+      <h2 class="font-aesthetic section-title">Bride & Groom</h2>
       <p class="intro-p">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami :</p>
       
-      <div class="couple-box" data-aos="fade-up">
+      <div class="couple-box">
         <h3 class="font-aesthetic couple-name">Siti Aisah, S.Pd.</h3>
         <p class="parents">Putri Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
 
       <div class="couple-ampersand font-aesthetic">&</div>
 
-      <div class="couple-box" data-aos="fade-up">
+      <div class="couple-box">
         <h3 class="font-aesthetic couple-name">Grendy, S.Pd.</h3>
         <p class="parents">Putra Pertama dari Bapak xxx & Ibu xxx</p>
       </div>
     </section>
 
-    <section class="card timer-card" data-aos="flip-up" data-aos-duration="1200">
-      <h2 class="font-aesthetic section-title-lg">Save The Date</h2>
+    <section class="card timer-card" data-aos="flip-up">
+      <h2 class="font-aesthetic section-title">Save The Date</h2>
       <div class="countdown">
         <div class="time-box"><span id="days">00</span><p>Hari</p></div>
         <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
@@ -75,56 +65,24 @@
       </div>
     </section>
 
-    <section class="card location-card" data-aos="fade-up" data-aos-duration="1200">
-      <h2 class="font-aesthetic section-title-lg">Waktu & Lokasi</h2>
-      <div class="event-info">
-        <h3>Akad & Resepsi</h3>
-        <p>🗓️ Sabtu, 05 Desember 2026</p>
-        <p>⏰ 08.00 WIB - Selesai</p>
-        <p>📍 Kediaman Mempelai Wanita</p>
-        <p style="font-size: 0.85rem; color: #0284c7; font-weight: 600; margin-top: 4px;">
-          Jl. Raya Narogong, Bekasi, Jawa Barat
-        </p>
-      </div>
-      <a href="https://maps.google.com" target="_blank" class="btn btn-map">📍 Petunjuk Google Maps</a>
-    </section>
-
     <section class="card gift-card" data-aos="fade-up">
-      <h2 class="font-aesthetic section-title-lg">Wedding Gift</h2>
-      <p class="gift-desc">Bagi Bapak/Ibu/Saudara/i yang ingin memberikan hadiah pernikahan dapat melalui virtual account / e-wallet di bawah ini:</p>
+      <h2 class="font-aesthetic section-title">Wedding Gift</h2>
+      <p class="gift-desc">Bagi Bapak/Ibu/Saudara/i yang ingin memberikan hadiah dapat melalui e-wallet/rekening di bawah ini:</p>
       
       <div class="bank-card">
         <div class="bank-name">🏧 BCA</div>
-        <p class="account-number" id="bca-num">1234567890</p>
+        <p class="account-number">1234567890</p>
         <p class="account-holder">a.n. GRENDY</p>
         <button onclick="copyText('1234567890')" class="btn-copy">📋 Copy</button>
       </div>
 
       <div class="bank-card">
         <div class="bank-name">📱 DANA</div>
-        <p class="account-number" id="dana-num">081234567890</p>
+        <p class="account-number">081234567890</p>
         <p class="account-holder">a.n. SITI AISAH</p>
         <button onclick="copyText('081234567890')" class="btn-copy">📋 Copy</button>
       </div>
     </section>
-
-    <section class="card rsvp-card" data-aos="fade-up">
-      <h2 class="font-aesthetic section-title-lg">Ucapan & Doa</h2>
-      <form id="rsvp-form" class="rsvp-form">
-        <input type="text" placeholder="Nama Lengkap" required class="input-field">
-        <textarea placeholder="Berikan ucapan dan doa terbaik..." rows="3" class="input-field" required></textarea>
-        <select class="input-field" required>
-          <option value="">Konfirmasi Kehadiran</option>
-          <option value="Hadir">Hadir</option>
-          <option value="Tidak Hadir">Tidak Hadir</option>
-        </select>
-        <button type="submit" class="btn btn-save" style="width: 100%;">Kirim Ucapan 💌</button>
-      </form>
-    </section>
-
-    <footer class="footer">
-      <p class="font-aesthetic" style="font-size: 2rem; color: #0284c7;">Aisah & Grendy</p>
-    </footer>
 
   </main>
 
