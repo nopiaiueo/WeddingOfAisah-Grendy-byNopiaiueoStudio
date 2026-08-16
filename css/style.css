@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&family=Cinzel:wght@600;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -8,12 +8,11 @@ body {
   background-color: #f0f9ff;
   color: #334155;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .font-aesthetic { font-family: 'Alex Brush', cursive; }
 
-/* COVER UNDANGAN PERSIS CANVA */
+/* COVER BAGIAN DEPAN */
 .cover-wrapper {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
@@ -28,93 +27,43 @@ body {
 .cover-card {
   width: 90%;
   max-width: 380px;
-  height: 90vh;
-  max-height: 680px;
-  background: #ffffff url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800') center/cover no-repeat;
+  height: 85vh;
+  max-height: 650px;
+  
+  /* GANTI LINK DI BAWAH INI DENGAN LINK/PATH GAMBAR CANVA KAMU */
+  background: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800') center/cover no-repeat;
+  
   border-radius: 20px;
-  padding: 30px 20px;
-  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.2);
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end; /* Memosisikan tombol di bawah */
   align-items: center;
-  position: relative;
-  border: 1px solid #bae6fd;
+  border: 2px solid #bae6fd;
 }
 
-/* Kustom Teks ala Canva */
-.canva-title-top {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: #1e293b;
-}
-
-.canva-title-main {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
-  color: #0f172a;
-  margin-top: -10px;
-}
-
-/* Frame Bundar Foto Canva */
-.canva-avatar-frame {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #0284c7;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  background: #e2e8f0;
-}
-
-.canva-avatar-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.canva-couple-names {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  color: #1e293b;
-}
-
-.canva-date {
-  font-size: 0.85rem;
-  color: #475569;
-  letter-spacing: 1px;
-}
-
-.canva-dear {
-  font-size: 0.8rem;
-  color: #64748b;
-  line-height: 1.4;
-}
-
-/* Tombol Open Invitation Canva */
-.btn-canva-open {
-  background: #bae6fd;
+/* TOMBOL BUKAN UNDANGAN */
+.btn-open-invitation {
+  background: #ffffff;
   color: #0284c7;
-  border: 1px solid #38bdf8;
-  padding: 10px 24px;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  border: 2px solid #38bdf8;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
   transition: all 0.3s ease;
 }
 
-.btn-canva-open:hover {
+.btn-open-invitation:hover {
   background: #0284c7;
-  color: white;
+  color: #ffffff;
 }
 
-/* KONTEN UTAMA */
+/* ISI KONTEN */
 .hidden { display: none !important; }
 .main-content { max-width: 450px; margin: 0 auto; padding: 20px 15px 40px 15px; }
 
@@ -127,7 +76,7 @@ body {
   border: 1px solid #e0f2fe;
 }
 
-.section-title-lg { font-size: 2.8rem; color: #0284c7; margin-bottom: 15px; }
+.section-title { font-size: 2.8rem; color: #0284c7; margin-bottom: 15px; }
 .quote-text { font-size: 0.85rem; line-height: 1.7; color: #475569; margin-bottom: 10px; }
 .quote-src { font-weight: 600; color: #0284c7; font-size: 0.8rem; }
 
@@ -135,52 +84,30 @@ body {
 .parents { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
 .couple-ampersand { font-size: 2rem; color: #38bdf8; margin: 15px 0; }
 
-/* COUNTDOWN */
 .countdown { display: flex; justify-content: center; gap: 8px; margin-top: 15px; }
 .time-box {
-  background: #0284c7;
-  color: white;
+  background: #0284c7; color: white;
   padding: 10px; border-radius: 10px; min-width: 60px;
 }
 .time-box span { font-size: 1.2rem; font-weight: bold; }
 .time-box p { font-size: 0.65rem; }
 
-.btn-map, .btn-save {
-  display: inline-block;
-  background: #0284c7; color: white;
-  padding: 10px 20px; border-radius: 20px;
-  font-size: 0.8rem; text-decoration: none;
-  margin-top: 15px;
-}
-
-/* BANK GIFT */
-.gift-desc { font-size: 0.8rem; color: #64748b; margin-bottom: 15px; }
 .bank-card {
   background: #f0f9ff; border: 1px solid #bae6fd;
   padding: 15px; border-radius: 12px; margin-bottom: 12px;
 }
 .bank-name { font-weight: bold; color: #0284c7; }
 .account-number { font-size: 1.1rem; font-weight: 600; color: #1e293b; margin: 4px 0; }
-.account-holder { font-size: 0.75rem; color: #64748b; margin-bottom: 8px; }
 .btn-copy {
   background: white; border: 1px solid #38bdf8; color: #0284c7;
   padding: 4px 12px; border-radius: 8px; cursor: pointer; font-size: 0.75rem;
 }
 
-/* RSVP */
-.rsvp-form { display: flex; flex-direction: column; gap: 10px; }
-.input-field {
-  width: 100%; padding: 10px; border: 1px solid #bae6fd;
-  border-radius: 8px; font-size: 0.85rem; outline: none;
-}
-
-/* MUSIC BUTTON */
 .music-btn {
   position: fixed; bottom: 20px; right: 20px;
   width: 40px; height: 40px; border-radius: 50%;
   background: #0284c7; color: white; border: 2px solid white;
   font-size: 0.9rem; cursor: pointer; z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
